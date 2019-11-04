@@ -3,7 +3,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     port: '3306',
     user: 'root',
-    password: '4414241509',
+    password: 'password',
     database: 'dormmanagement',
     useConnectionPooling:true
 });
