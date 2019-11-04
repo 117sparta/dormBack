@@ -11,11 +11,15 @@ router.get('/',function(req,res,next){
             res.end();
         }
         else{
-            let finalResult = JSON.stringify(result);
-            res.writeHead(200,{'Content-type':'text/plain;charset=utf-8','Access-Control-Allow-Origin':'*',
-                'Access-Control-Allow-Methods':'PUT,GET,POST,DELETE,OPTIONS'});
+            const finalResult = {
+                statusCode: 0,
+                message: {
+                    roomMates: result
+                }
+            };
+            res.writeHead(200,{'Content-type':'application/json;charset=utf-8'});
             console.log(finalResult);
-            res.write(finalResult);
+            res.write(JSON.stringify(finalResult));
             res.end();
         }
     });
