@@ -62,7 +62,6 @@ router.get('/queryDormDetail', function(req, res, next) {
           }
         }
       }
-      console.log(dormList);
       let response = new libs.Message();
       response.setStatusCode(0);
       response.setMessage({ dormList });
